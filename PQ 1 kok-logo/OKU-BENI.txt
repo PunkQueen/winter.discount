@@ -1,0 +1,73 @@
+PUNK QUEEN — KIŞ İNDİRİMİ KATALOĞU
+===================================
+
+BU KLASÖRDE NE VAR
+------------------
+index.html    : Müşterinin göreceği katalog (açılış ekranı + kategoriler)
+YONETIM.html  : Senin kullanacağın yönetim sayfası (biten ürünleri kaldırmak için)
+urunler.js    : Ürün listesi (yönetim sayfası bunu günceller)
+gorseller/    : Listede görünen görseller
+buyuk/        : Tam ekran açılınca görünen yüksek çözünürlüklü görseller
+logo/         : Logo ve favicon
+.nojekyll     : GitHub Pages için teknik dosya (silme)
+
+
+GITHUB PAGES İLE LİNK OLUŞTURMA
+--------------------------------
+ÖNEMLİ: Zip dosyasını olduğu gibi yükleme! Önce çıkart, İÇİNDEKİLERİ yükle.
+index.html deponun EN ÜST seviyesinde olmalı (klasör içinde değil).
+
+YÖNTEM A — GitHub Desktop (ÖNERİLEN, tek seferde biter)
+1. desktop.github.com adresinden GitHub Desktop'ı indir ve kur.
+2. GitHub.com'da yeni bir depo (repository) oluştur:
+   - İsim: punkqueen-katalog
+   - Public seç (Pages'in ücretsiz çalışması için gerekli)
+   - "Add a README file" işaretle, Create repository
+3. GitHub Desktop'ta: File > Clone repository > az önce açtığın depoyu seç.
+4. Bilgisayarında oluşan depo klasörünü aç.
+5. Bu klasördeki TÜM dosyaları (index.html, urunler.js, gorseller, buyuk, logo,
+   .nojekyll dahil) oraya kopyala.
+6. GitHub Desktop'ta alt solda "Summary" kutusuna "katalog" yaz,
+   "Commit to main" > sonra "Push origin" butonuna bas.
+7. GitHub.com'da depoya git: Settings > Pages >
+   Source: "Deploy from a branch", Branch: main, klasör: / (root) > Save.
+8. 1-2 dakika sonra adresin hazır:
+   https://KULLANICIADIN.github.io/punkqueen-katalog/
+
+YÖNTEM B — Sadece tarayıcıyla (100 dosya sınırı yüzünden parça parça)
+1. GitHub.com'da yukarıdaki gibi Public bir depo oluştur.
+2. "Add file" > "Upload files" ile şu sırayla yükle:
+   1. parti : index.html, YONETIM.html, urunler.js, style.css, .nojekyll, OKU-BENI.txt
+   2. parti : logo klasörü
+   3. parti : gorseller klasöründen ilk 100 dosya
+   4. parti : gorseller klasöründen kalan 48 dosya
+   5. parti : buyuk klasöründen ilk 100 dosya
+   6. parti : buyuk klasöründen kalan 48 dosya
+   (Her partiden sonra "Commit changes" demeyi unutma.)
+3. Sonra Settings > Pages > Source: main / (root) > Save.
+
+
+ÜRÜN BİTİNCE NE YAPACAKSIN
+--------------------------
+1. YONETIM.html dosyasına çift tıkla (tarayıcıda açılır).
+2. Biten ürünün "Stokta" kutucuğundaki işareti kaldır.
+   (Rengi yanlışsa kartın altındaki listeden doğrusunu seçebilirsin.)
+3. "Kaydet" düğmesine bas -> urunler.js iner.
+4. İnen urunler.js'i depo klasöründeki eskisinin ÜZERİNE kopyala.
+5. GitHub Desktop'ta Commit + Push yap. Link aynı kalır, içerik güncellenir.
+   (Tarayıcı yöntemi kullanıyorsan: depoda urunler.js'e tıkla,
+    kalem simgesi > eski içeriği sil > yeni dosyanın içeriğini yapıştır > Commit.)
+
+
+SEPET VE SİPARİŞ
+----------------
+Müşteri ürünü listeye eklediğinde her basış 4 adet ekler (4 -> 8 -> 12).
+Alt çubuktaki "My list" düğmesiyle sepet ekranı açılır: seçtiği ürünleri
+fotoğraflarıyla görür, adet artırıp azaltabilir, satır silebilir.
+Altta kalem sayısı, toplam adet ve tahmini tutar görünür.
+Oradan "Send on WhatsApp" ile sipariş sana gelir.
+
+Üstü ve altı ayrı kodlu 5 takım modelinde:
+- Sweatshirt/Hırka kategorisinden eklenirse üstün kodu ve fiyatı
+- Pantolon kategorisinden eklenirse altın kodu ve fiyatı
+- Eşofman (takım) kategorisinden eklenirse iki kod ve iki fiyat birlikte gider.
